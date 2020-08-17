@@ -1,0 +1,7 @@
+{
+  "name": "Creels",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
