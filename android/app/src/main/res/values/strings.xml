@@ -2,6 +2,6 @@
 <resources>
     <string name="app_name">Creels</string>
     <string name="title_activity_main">Creels</string>
-    <string name="package_name">io.ionic.starter</string>
-    <string name="custom_url_scheme">io.ionic.starter</string>
+    <string name="package_name">uk.ac.standrews.fishing</string>
+    <string name="custom_url_scheme">uk.ac.standrews.fishing</string>
 </resources>

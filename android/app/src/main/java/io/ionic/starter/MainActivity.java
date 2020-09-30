@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package uk.ac.standrews.fishing;
 
 import android.os.Bundle;
 
