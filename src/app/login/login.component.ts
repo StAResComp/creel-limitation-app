@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {
-  Plugins
-} from '@capacitor/core';
+import { Plugins } from '@capacitor/core';
+
+import { oauth2Options } from '../../environments/environment';
 
 @Component({
   selector: 'login',
@@ -11,34 +11,11 @@ import {
 })
 export class LoginComponent {
 
-  oauth2Options = {
-    appId: 'APP_ID_GOES_HERE',
-    authorizationBaseUrl: 'https://some.website/o/authorize',
-    accessTokenEndpoint: 'https://some.website/o/token',
-    responseType: 'code',
-    pkceEnable: true,
-    web: {
-      redirectUrl: 'http://localhost:8100/auth'
-    },
-    android: {
-      pkceEnabled: true,
-      responseType: 'code',
-      redirectUrl: 'uk.ac.standrews.fishing://oauth/redirect',
-      handleResultOnNewIntent: true,
-      handleResultOnActivityResult: true
-    },
-    ios: {
-      pkceEnabled: true,
-      responseType: 'code',
-      redirectUrl: 'uk.ac.standrews.fishing://oauth/redirect',
-    }
-  };
-
   refreshToken: string;
 
   onOAuthBtnClick() {
     Plugins.OAuth2Client.authenticate(
-      this.oauth2Options
+      oauth2Options
     ).then(response => {
       let accessToken = response["access_token"];
       this.refreshToken = response["refresh_token"];
